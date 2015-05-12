@@ -27,12 +27,3 @@ template "/usr/local/bin/drush-master/drushrc.php" do
   group "root"
   mode "0644"
 end
-
-if node["vdd"]["sites"]
-  template "/usr/local/bin/drush-master/aliases.drushrc.php" do
-    source "aliases.drushrc.php.erb"
-    owner "root"
-    group "root"
-    mode "0644"
-  end
-end
